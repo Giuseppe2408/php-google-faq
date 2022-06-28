@@ -63,8 +63,10 @@
         ],
         
         
-    ]
-        
+    ];
+    
+    
+    $navbar = ['introduzione', 'norme sulla privacy', 'Termini di servizio', 'Tecnologie', 'Domande Frequenti']
 ?>
 
 <!DOCTYPE html>
@@ -74,9 +76,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- gfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="">
+        <h2>Privacy e termini</h2>
+        <nav>
+            <ul id="flex"><?php
+                foreach ($navbar as $value) {
+                   echo '<li>' . '<a>' . $value . '</a>' . '</li>';
+                }
+
+            ?>
+                
+            </ul>
+        </nav>
+    </header>
+
+
     <div id="container"> <?php
         foreach ($arrayFaq as $faq) {
             foreach ($faq as $key => $value) {
